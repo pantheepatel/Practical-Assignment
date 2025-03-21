@@ -13,17 +13,6 @@ namespace SMSCodeFirst
         {
             using (SMSCodeDBContext context = new SMSCodeDBContext())
             {
-                //// Force database creation
-                //if (!context.Database.Exists())
-                //{
-                //    context.Database.Initialize(force: true);
-                //    Console.WriteLine("Database created automatically!");
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Database already exists.");
-                //}
-
                 //making 3 courses objects
                 var course1 = new Course
                 {
