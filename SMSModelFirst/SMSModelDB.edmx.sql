@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/19/2025 19:02:16
+-- Date Created: 03/21/2025 17:17:15
 -- Generated from EDMX file: C:\Users\panthee.patel\Desktop\submissions\practical-assignment\Assignment\SMSModelFirst\SMSModelDB.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,26 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_StudentCourse_Course]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[StudentCourse] DROP CONSTRAINT [FK_StudentCourse_Course];
+GO
+IF OBJECT_ID(N'[dbo].[FK_StudentCourse_Student]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[StudentCourse] DROP CONSTRAINT [FK_StudentCourse_Student];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Courses]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Courses];
+GO
+IF OBJECT_ID(N'[dbo].[StudentCourse]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[StudentCourse];
+GO
+IF OBJECT_ID(N'[dbo].[Students]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Students];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
